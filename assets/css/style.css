@@ -1,0 +1,206 @@
+/*font*/
+.poppins-thin {
+    font-family: "Poppins", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+  }
+  
+  .poppins-extralight {
+    font-family: "Poppins", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+  }
+  
+  .poppins-light {
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+  }
+  
+  .poppins-regular {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .poppins-medium {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+  }
+  
+  .poppins-semibold {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+  }
+  
+  .poppins-bold {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  .poppins-extrabold {
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+  }
+  
+  .poppins-black {
+    font-family: "Poppins", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+  }
+  
+  .poppins-thin-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 100;
+    font-style: italic;
+  }
+  
+  .poppins-extralight-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 200;
+    font-style: italic;
+  }
+  
+  .poppins-light-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-style: italic;
+  }
+  
+  .poppins-regular-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+  }
+  
+  .poppins-medium-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: italic;
+  }
+  
+  .poppins-semibold-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: italic;
+  }
+  
+  .poppins-bold-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: italic;
+  }
+  
+  .poppins-extrabold-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+    font-style: italic;
+  }
+  
+  .poppins-black-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 900;
+    font-style: italic;
+  }
+
+
+
+/*Reset*/
+
+*{
+    margin: 0;
+    border: 0;
+}
+
+/*Font body*/
+
+body{
+    font-family: "Poppins";
+    background-color: whitesmoke;
+}
+
+/*contenedores*/
+
+.big-box{
+    display: flex;
+    flex-direction: column;
+    padding-top: 15rem;
+}
+
+.top-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.bottom-box{
+    display: flex;
+    padding-top: 2rem;
+    gap: 200px;
+}
+.left-box{
+    display: flex;
+    flex-direction: column;
+    padding-left: 100px;
+}
+.right-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.top-ul{
+    display: flex;
+    gap: 10px;
+}
+
+
+/*top-box*/
+.p-nueva-tarea{
+    padding: 5px;
+    padding-left: 110px;
+    font-weight: 300;
+    font-style: italic;
+}
+.input-text{
+    width: 60%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    border: 2px solid grey;
+    
+}
+.btn-agregar{
+    height: min-content;
+    padding: 12px 20px;
+    border: 2px solid grey;
+    font-family: "Poppins";
+    background-color: rgb(3, 3, 208);
+    color: white;
+
+}
+
+
+
+/*left-box*/
+
+.p-ui{
+    padding: 10px;
+}
+
+
+/*right-box*/
+
+.btn-eliminar{
+    width: 80px;
+    height: 30px;
+    background-color: rgb(3, 3, 208);
+    color: white;
+}
+.fila-checkbox{
+    color: green;
+    font-style: italic;
+}

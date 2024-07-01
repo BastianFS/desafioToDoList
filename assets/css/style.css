@@ -200,7 +200,8 @@ body{
     background-color: rgb(3, 3, 208);
     color: white;
 }
-.fila-checkbox{
+.p-success{
+    
     color: green;
     font-style: italic;
 }

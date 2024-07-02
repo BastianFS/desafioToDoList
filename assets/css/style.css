@@ -135,7 +135,7 @@ body{
 .big-box{
     display: flex;
     flex-direction: column;
-    padding-top: 15rem;
+    padding-top: 100px;
 }
 
 .top-box{

@@ -205,3 +205,27 @@ body{
     color: green;
     font-style: italic;
 }
+
+@media (max-width: 768px) {
+  .grid-container {
+      grid-template-columns: 1fr;
+  } 
+}
+@media (max-width: 480px) {
+  .grid-container{
+    grid-template-columns: auto-fit;
+  }
+
+  .big-box{
+    padding-top: 10px;
+}
+  .p-nueva-tarea{
+    padding-left: 60px;
+}
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  padding: 20px;
+}

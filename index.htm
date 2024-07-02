@@ -6,10 +6,11 @@
     <link rel="stylesheet" href="./assets/css/style.css">
     <title>To Do List</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div class="grid-container">
     <div class="big-box">
         <p class="p-nueva-tarea">Nueva Tarea</p>
         <div class="top-box">
@@ -18,8 +19,8 @@
         </div>
         <div class="bottom-box">
             <div class="left-box">
-                <p class="p-ui">Total:<span id="totalSpan"></span></p>
-                <p class="p-ui">Realizadas:<span id="realizadasSpan"></span></p>
+                <p class="p-ui">Total:<span id="total-span"></span></p>
+                <p class="p-ui">Realizadas:<span id="realizadas-span"></span></p>
             </div>
             <div class="right-box">
                 <table class="tareas-table">
@@ -42,6 +43,7 @@
             </div>
         </div>
     </div> 
+</div>
 
     <script src="./assets/js/script.js"></script>
 </body>

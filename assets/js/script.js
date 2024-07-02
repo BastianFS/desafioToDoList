@@ -2,47 +2,53 @@
 const inputTarea = document.getElementById('inputText')
 const btnTarea = document.getElementById('btnAgregar')
 const btnEliminar = document.getElementById('btn-eliminar')
-const tareas = []
-const cuentaTareas = document.getElementById('totalSpan')
+const cuentaTareas = document.getElementById('total-span')
+const cuentaTareasCompletado = document.getElementById('realizadas-span')
 const tableBody = document.getElementById('table-body')
-let i = 0;
+let tareas = [
+    {id: 1, tarea: "Pasear al perro", completado: true},
+    {id: 2, tarea: "Darle comida al perro", completado: true},
+    {id: 3, tarea: "Evitar que el perro mancille el living", completado:false}
+]
 
 function renderList(tareas){
     let html = ""
     for (let tarea of tareas) {
-        html += `<tr id="tr-${tarea.id}">
+        html += `<tr>
                 <td>${tarea.id}</td>
-                <td id="ptarea${tarea.id}">${tarea.tarea}</td>
+                <td class=${tarea.completado ? 'p-success': ''}>${tarea.tarea}</td>
                 <td><button onclick="eliminar(${tarea.id})" class= "btn-eliminar" id="btn-eliminar">Eliminar</button></td>
-                <td><input type="checkbox" onchange="checkboxCheck(checkbox${tarea.id},${tarea.id},ptarea${tarea.id})" id="checkbox${tarea.id}">
+                <td><input type="checkbox" onchange="check(this,${tarea.id})" ${tarea.completado ? 'checked' : ''}>
                 </tr>`;
         }
         cuentaTareas.textContent = ` ${tareas.length}`;
         tableBody.innerHTML = html;
+
+        let filterCompletado = tareas.filter((tarea) =>tarea.completado === true);
+        cuentaTareasCompletado.textContent = `${filterCompletado.length}`;
     }
 
 function eliminar(id){
-    const index = tareas.findIndex((ele) => ele.id == id)
+    const index = tareas.findIndex((ele) =>ele.id == id)
     tareas.splice(index, 1)
     renderList(tareas)
 }
-function checkboxCheck(checkbox,id,pid){
+function check(checkbox,id){
+    const index = tareas.findIndex((ele) =>ele.id == id)
     if (checkbox.checked){
-        tareas[id].completado = true
-
+        tareas[index].completado = true
     }
     else{
-        tareas[id].completado = false
+        tareas[index].completado = false 
     }
-    let pTarea = document.getElementById(pid)
-    if(tareas[id].completado){
-        pTarea.classList.add("p-success");
-    }
-    else{
-        pTarea.classList.remove("p-success");
-    }
+    renderList(tareas)
+    console.log(checkbox.cheked)
+    console.log(tareas[index].completado)
 }
 
+document.addEventListener('DOMContentLoaded', function(){
+    renderList(tareas)
+});
     
 btnTarea.addEventListener("click", () => {
     const tareaNueva = inputTarea.value
@@ -52,13 +58,15 @@ btnTarea.addEventListener("click", () => {
     }
     else{
         tareas.push({
-            id: i, 
+            id: Date.now(), 
             tarea: tareaNueva,
             completado: false
         })
         inputTarea.value = ""
-        i += 1;
         renderList(tareas)
+        console.log(tareas)
     }
     
 })
+
+
